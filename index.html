@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in-body">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="cube-loader">
+            <div class="cube-top"></div>
+            <div class="cube-wrapper">
+                <span style="--i:0" class="cube-span"></span>
+                <span style="--i:1" class="cube-span"></span>
+                <span style="--i:2" class="cube-span"></span>
+                <span style="--i:3" class="cube-span"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"> <font face="Dancing Script">For You, Special 🫶</font></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="1a.html">For You</a></li>
+            <li><a href="1b.html">Contacts </a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero">
+        <h1 class="glow"> <font size="6" face="aerial"> To the One who holds My Heart💖, <font face="Cursive" size="8" color="#d60a0a"> <b>Bhawna</b> 🌕 </font></h1>
+        <h2 class="greeting"> <font size="4"> I Hope You're Smiling Right Now </font></h2>
+        
+        <p class="message">This website is created especially for you 🥹 by someone who admires you deeply. I couldn’t let this remain unsaid.
+            Sometimes, amidst the rush of life, someone quietly catches your attention in the most unexpected way. You are that someone. 
+            From the moment I saw you, something about you stood out, and since then, you've been on my mind in ways I never expected. 
+            I couldn't let the opportunity slip by to let you know how truly special you are to me. <br>
+            Click on every button named "For You" on the top right of every page to see something cool🥹. <br>
+            Click the "button" below, to uncover this story.</p>
+             
+        <button onclick="location.href='2.html'" class="cta-button">See What's Next →</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Coded with ❤️ by Someone Who's Always Thinking of You</p>
+    </footer>
+    
+    <script>
+        // JavaScript to handle the slide-up effect for the header on scroll
+        let lastScrollTop = 0;
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+
+        // Loading screen hide logic
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+        });
+    </script>
+
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

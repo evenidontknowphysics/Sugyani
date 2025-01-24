@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoplay Video with Mute/Unmute</title>
+  <style>
+    /* Basic reset and layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px; /* Maximum width for desktop */
+      border: 5px solid #fff; /* White border around the video */
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .button-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+
+    .mute-button {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .mute-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Phone responsive styles */
+    @media (max-width: 600px) {
+      .video-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <!-- Video element with no 'muted' attribute (unmuted by default) -->
+    <video id="myVideo" autoplay loop>
+      <source src="1a.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Mute/Unmute Button -->
+    <div class="button-container">
+      <button class="mute-button" id="muteButton" onclick="toggleMute()">Mute</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle mute/unmute
+    function toggleMute() {
+      var video = document.getElementById('myVideo');
+      var button = document.getElementById('muteButton');
+
+      if (video.muted) {
+        video.muted = false;
+        button.textContent = 'Mute';  // Change button text to Mute
+      } else {
+        video.muted = true;
+        button.textContent = 'Unmute';  // Change button text to Unmute
+      }
+    }
+  </script>
+
+</body>
+</html>

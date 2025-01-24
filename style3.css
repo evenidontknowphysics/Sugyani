@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d2a40;  /* Midnight blue background */
+    color: #e0e0e0;  /* Light gray text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+}
+
+/* Add Starry Background */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/11/18/14/15/stars-1831092_960_720.jpg') repeat;
+    animation: stars 60s linear infinite;
+    z-index: -2;
+}
+
+@keyframes stars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #003d4d;  /* Deep teal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    color: #ff7f50;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Dream Page Section */
+.dream-page {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #003d4d;  /* Deep teal */
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dream-page h1 {
+    font-family: 'Lora', serif;
+    font-size: 3.2rem;
+    color: #ff7f50;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff7f50;
+    animation: glowing 2s infinite ease-in-out;
+}
+
+.dream-page .content-box {
+    background-color: #0d1117;
+    padding: 30px;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    color: #c9d1d9;
+    box-shadow: 0 0 15px rgba(255, 123, 114, 0.3);
+}
+
+.dream-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #8b949e;
+}
+
+.dream-page button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dream-page button:hover {
+    transform: scale(1.05);
+    background-color: #e68900;
+    box-shadow: 0 0 10px #e68900;
+}
+
+/* Animations */
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #ff7f50, 0 0 20px #ff7f50;
+    }
+    50% {
+        text-shadow: 0 0 20px #ffcc66, 0 0 30px #ffcc66;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff7f50, 0 0 20px #ff7f50;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: #003d4d;
+    color: #bbb;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dream-page h1 {
+        font-size: 2.5rem;  /* Smaller size on mobile */
+    }
+
+    .dream-page p {
+        font-size: 1.1rem;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

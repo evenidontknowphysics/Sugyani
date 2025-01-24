@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep video behind content */
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the video cover the screen */
+    opacity: 0.8; /* Dim the video a bit for readability */
+}
+
+/* Button to mute/unmute */
+.play-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px; /* Change to 'left' if you prefer the left corner */
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 2px solid #58a6ff;
+    color: #58a6ff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999; /* Ensure it appears on top */
+}
+
+.play-btn:hover {
+    background-color: #58a6ff;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #58a6ff;
+}
+
+/* Proposal Page */
+.proposal-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.proposal-container {
+    background: rgba(22, 27, 34, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    max-width: 700px;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive Text for Small Screens */
+.proposal-container h1 {
+    color: #58a6ff;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px #58a6ff;
+    margin-bottom: 20px;
+    animation: glowing 2s infinite ease-in-out;
+}
+
+.proposal-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Light gray color for the text */
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.confession-btn {
+    padding: 12px 25px;
+    background-color: #58a6ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confession-btn:hover {
+    background-color: #409eff;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #58a6ff;
+}
+
+/* Animations */
+@keyframes glowing {
+    0% { text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff, 0 0 30px #58a6ff, 0 0 40px #58a6ff, 0 0 50px #58a6ff, 0 0 75px #58a6ff; }
+    50% { text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6, 0 0 30px #ff79c6, 0 0 40px #ff79c6, 0 0 50px #ff79c6, 0 0 75px #ff79c6; }
+    100% { text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff, 0 0 30px #58a6ff, 0 0 40px #58a6ff, 0 0 50px #58a6ff, 0 0 75px #58a6ff; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive for small screens (Mobile Devices) */
+@media screen and (max-width: 768px) {
+    .proposal-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .proposal-container h1 {
+        font-size: 2rem;
+    }
+
+    .proposal-text {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        color: #d3d3d3; /* Light color (light gray) */
+        margin-bottom: 30px;
+        font-family: 'Arial', sans-serif;
+    }
+    
+
+    .confession-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .play-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .proposal-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .proposal-text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .confession-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .play-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+    }
+}

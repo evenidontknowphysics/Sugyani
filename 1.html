@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| For You |</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in-body">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">💫 You Are My Universe</div>
+        <ul>
+            <li><a href="1.html">Home</a></li>
+            <li><a href="1a.html">For You</a></li>
+            <li><a href="2.html">Next Page</a></li>
+            <li><a href="1b.html"> My Contacts </a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero">
+        <h1 class="glow">Hii, BHAWNA</h1>
+        <h2 class="greeting">I Hope You're Smiling Right Now</h2>
+        
+        <p class="message">This website is created with all my heart, dedicated to someone extraordinary. You are the one who has caught my eye in the most unexpected way, and I couldn’t let my admiration go unexpressed. 
+            <br>Click ‘Next’ to continue this beautiful journey.</p> 
+        <button onclick="location.href='2.html'" class="cta-button">See What's Next →</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Crafted with ❤️ by Someone Who's Always Thinking of You</p>
+    </footer>
+    <script>
+        // JavaScript to handle the slide-up effect for the header on scroll
+        let lastScrollTop = 0; // Store the last scroll position
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Check if scrolling down or up
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down, hide the nav
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up, show the nav
+                nav.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+        });
+    </script>
+</body>
+</html>

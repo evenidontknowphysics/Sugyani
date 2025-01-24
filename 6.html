@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+
+        /* Mute button styling */
+        .mute-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hey Bhawna,</h1>
+        <p>
+            I’ve been thinking about this for a while, and I decided to share something that’s been on my mind. We’ve only had a few moments together, I don’t know if you remember me, but in that time, I’ve really come to admire who you are. There’s something about the way you light up the room with your presence, and I’ve found myself hoping to get to know you better.
+        </p>
+        <p>
+            I’m putting myself out here because I think you’re pretty amazing, and I’d love to see where things could go between us, if you feel the same way.
+        </p>
+        <p>
+            If you feel the same way, I’d love to hear from you. If you want, you can drop me a message here, or we can just chat whenever you’re ready.
+        </p>
+        <div class="contact-info">
+            <p>Here is my contacts:</p>
+            <p><a href="1b.html">Click Me</a></p>
+        </div>
+    </div>
+
+    <!-- Audio player -->
+    <audio id="background-music" autoplay loop>
+        <source src="idk.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Mute/Unmute Button -->
+    <button class="mute-btn" id="mute-btn" onclick="toggleMute()">🔊</button>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("background-music").play();
+        };
+
+        function toggleMute() {
+            var audio = document.getElementById("background-music");
+            var muteButton = document.getElementById("mute-btn");
+
+            // Toggle mute/unmute
+            if (audio.muted) {
+                audio.muted = false;
+                muteButton.innerHTML = "🔊";  // Unmute icon
+            } else {
+                audio.muted = true;
+                muteButton.innerHTML = "🔇";  // Mute icon
+            }
+        }
+    </script>
+
+</body>
+</html>

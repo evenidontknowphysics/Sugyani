@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <!-- Video Background Section -->
+    <div class="video-container">
+        <video id="background-video" autoplay loop playsinline>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Button to mute/unmute video -->
+    <button onclick="toggleMute()" class="play-btn" id="mute-unmute-btn">Mute</button>
+
+    <!-- Proposal Section -->
+    <section class="proposal-page">
+        <div class="proposal-container fade-in">
+            <p class="proposal-text">
+                <h1 class="glow"> A Heartfelt Confession 💙</h1> <font color="white" >
+                    I’m not sure where to begin, but I’ll do my best to express what’s been on my heart.
+
+                    From the very first moment I met you, even though it was brief, you’ve been in my thoughts more than anything else. There’s something about you that has stayed with me, and I find myself thinking about you often.
+                    
+                    I’ve wanted to share how I feel, but I didn’t know how to put it into words. So, I decided to create this website as a way to express something I’ve kept inside for quite some time. You’ve inspired me in more ways than you might even realize, and that’s something I feel deeply grateful for.
+                    
+                    I don’t expect anything in return, but there’s one thing I wanted to say to you:
+                    You are someone incredibly special to me, and I would love the chance to get to know you better.
+                    
+                    If nothing else, I truly hope this brings a smile to your face.  </font>
+            </p> <br>
+            <button onclick="location.href='5.html'" class="confession-btn">Go to the Final Page →</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by Someone Who Thinks You’re Amazing</p>
+    </footer>
+
+    <script>
+        // Function to toggle mute/unmute
+        function toggleMute() {
+            const video = document.getElementById('background-video');
+            const muteButton = document.getElementById('mute-unmute-btn');
+            
+            if (video.muted) {
+                video.muted = false;
+                muteButton.innerText = "Mute"; // Change text to "Mute"
+            } else {
+                video.muted = true;
+                muteButton.innerText = "Unmute"; // Change text to "Unmute"
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Your page's default language
+                includedLanguages: 'hi', // List the languages you want to support (e.g., Spanish, French, German, Italian)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
